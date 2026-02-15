@@ -1,0 +1,28 @@
+@ProjectDotNetMediatr_HostAddress = http://localhost:5233
+
+GET {{ProjectDotNetMediatr_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+### Get User
+GET https://localhost:7144/User
+Accept: application/json
+###
+### Create User
+POST https://localhost:7144/User
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+
+### Publish Event
+POST https://localhost:7144/User/publish
+Content-Type: application/json
+
+{
+  "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+}
+
